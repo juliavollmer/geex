@@ -198,7 +198,8 @@ Changing the animation keyframes also changes speed. */
   margin: auto;
   height: 80%;
   width: 80%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #description {
