@@ -1,0 +1,319 @@
+@font-face {
+  font-family: "RF-Rostin";
+  src: /* url('webfont.eot'); IE9 Compat Modes */
+    /* src:  url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+         /* url('webfont.woff') format('woff'), Modern Browsers */ url("../fonts/RF-Rostin-Regular.otf")
+    format("truetype"); /* Safari, Android, iOS */
+  /* url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+body {
+    background-image: url('media/bg.jpg');
+    /* background-color: black; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  overflow: hidden;
+}
+#smiley {
+  cursor:pointer; 
+  /* margin-left: 50%;
+  margin-top:-10vh; */
+  position: absolute;
+  width: 10vw; 
+  height:auto; 
+  left: 50vw;
+  top: 40vh;
+  margin-left: -5vw;
+  /* transform:rotate(-30deg); */
+  animation: rotate 15s ease-in-out infinite alternate;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.box {
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  display: block;
+  left: 45%;
+  top: 45%;
+  /* transition: all 0.1s linear; */
+}
+
+#message {
+  visibility: hidden;
+  font-family: "RF-Rostin";
+  font-size: 120px;
+  text-align: center;
+}
+.runner {
+  position: absolute;
+  display: block;
+  left: 45%;
+  top: 45%;
+  transition: all 0.1s linear;
+}
+
+#exit1 {
+  width: 10vw;
+  height: auto;
+  visibility: hidden;
+}
+
+#exit2 {
+  width: 6vw;
+  visibility: hidden;
+  height: auto;
+}
+/* https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ */
+
+@font-face {
+  font-family: 'IBMPlex';
+  src: url('../fonts/IBMPlexMono-Regular.ttf')  format('truetype');
+}
+
+.ticker-container {
+  z-index: 2;
+  height: 100%;
+  position: fixed;
+  margin-left: 5vw;
+  width: 6vh;
+  top: 0;
+  bottom: 0;
+  font-family: "RF-Rostin";
+  font-style: "normal";
+  font-weight: normal;
+  font-size: 3vh;
+  line-height: 100%;
+  /* word-spacing: -2vh; */
+  /* letter-spacing: -0.5vh;  */
+  color: #f0bb28;
+  background-color: rgb(0, 0, 0);
+  /* font-weight: bold; */
+  /* text-orientation:sideways-right; */
+   /* Original style: Please change back to see what you like the best. */
+  text-orientation:upright; 
+  writing-mode: vertical-lr;
+  /* transition: all 0.5s; */
+}
+
+@keyframes ticker {
+  from { transform: translateY(0%); }
+  to { transform: translateY(-200%); }
+}
+
+@keyframes ticker2 {
+  from {
+    transform: translateY(0%); }
+  to { 
+    transform: translateY(-200%); }
+}
+
+/* The animation duration and delay have to all be adjusted when the speed is changed. 
+Changing the animation keyframes also changes speed. */
+
+.ticker-move {
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  white-space: nowrap;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 80s;
+}
+
+.ticker-move2 {
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  white-space: nowrap;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker2;
+  animation-duration: 80s;
+  animation-delay: 40s;
+}
+.ticker-container:hover {
+  font-size: 4vh;
+  /* word-spacing: -4vh; */
+}
+.ticker-container:hover .ticker-move{
+  animation-duration: 150s;
+}
+
+.ticker-container:hover .ticker-move2 {
+  animation-duration: 300s;
+  animation-delay: 150s;
+}
+
+.expand {
+    display: none;
+    cursor:grab;
+}
+
+.hide {
+    font-family: 'LucidaConsole';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6vh;
+    line-height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    overflow: auto;
+    left: 0;
+    right:0;
+    bottom:0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(194, 126, 0);
+    color:white;
+    z-index: 6;
+    /* padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2vh; */
+    transition: visibility .5s linear, opacity .5s;
+}
+.text {
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  height: 80%;
+  width: 80%;
+  overflow: auto;
+}
+.project {
+
+  cursor:grab;
+  height: 15vh;
+  position: absolute;
+  width: auto;
+    animation: 30s ease-in-out infinite alternate float;
+    animation-delay: 0s;
+    transition: transform 0.5s ease-in-out;
+}
+.project:nth-of-type(2) {
+  animation-delay: 5s;
+}
+  
+.project::nth-of-type(3) {
+  animation-delay: 3s;
+  transform: rotate(90deg);
+}
+  
+.project:nth-of-type(4) {
+  animation-delay: 15s;
+}
+
+.project:hover {
+  transform: scale(1.2) !important;
+  animation-play-state: paused;
+}
+
+#description {
+  position: absolute;
+  font-family: arial;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  left: 50vw;
+  top: 40vh;
+  margin-left: -5vw;
+  text-align: center;
+  animation: 30s ease-in-out infinite alternate float;
+  animation-delay: 4s;
+}
+/* floating by https://codepen.io/mcwebb/pen/ygjQVG */
+@keyframes float {
+    0% {
+      transform: translate(0,0) scale(1) rotate(-30deg);
+      
+    }
+    
+    30% {
+      transform: translate(0,0) scale(1.1) rotate(-40deg);
+    }
+    
+    50% {
+      transform: translate(0px, -10px) scale(1.1)
+    }
+    
+    75% {
+      transform: translate(20px, 10px) scale(1.1) rotate(-20deg);;
+    }
+    
+    100% {
+      transform: translate(-10px, 20px) scale(1.1) rotate(-10deg);;
+    }
+  }
+  /* stars by Keith Clark ~ https://codepen.io/keithclark/pen/zqcEd*/
+
+/* Stars 
+------------------------------------- */
+#space {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#space, .stars {
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 10s infinite;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 1s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 2s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 3s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 4s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  } 
+  85% {
+    opacity: 1;
+    transform: scale(2.8);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}
