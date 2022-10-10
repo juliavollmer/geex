@@ -32,9 +32,11 @@ var descriptionList = ["Fabian",
 $("[data-id]").each(function (element) {
     $(this).click(function () {
         $("#description").text(descriptionList[$(this).data("id")]);
+        console.log("click registered");
     })
     $(this).draggable()
 })
+
 $("#description").draggable()
 
 var divs = document.getElementsByClassName("rand");
@@ -65,7 +67,6 @@ function reshuffle(){
         // update top and left position
         thisDiv.style.top = randomTop + "px";
         thisDiv.style.left = randomLeft + "px";
-        console.log(thisDiv);
     
     }
 }
