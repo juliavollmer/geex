@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=1000"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <link rel="manifest" href="../../media/favicon_io//site.webmanifest">
@@ -56,9 +56,11 @@
   </a>
 <!-- Class Description -->
   <div class="rand" onclick="expand('hide1')" id="message">Gedankenexperiment</div>
-  <img id="smiley" src="media/thinker.png" alt="smiley" onclick="reshuffle()" />
-
-  <div class="hide" id="hide1" onclick="expand('hide1')" style="visibility: hidden; opacity: 0;">
+  <div class="transform-example-container">
+    <p class="transform-absolute"><img id="smiley" src="media/thinker.png" alt="smiley" onclick="reshuffle()" />
+    </p>
+  </div>
+   <div class="hide" id="hide1" onclick="expand('hide1')" style="visibility: hidden; opacity: 0;">
     <p>
       <div class="text">A *Gedankenexperiment* ( german for *thought experiment* ) describes a hypothetical setup or
         situation that is theoretically mapped out in order to think about consequences and outcomes.

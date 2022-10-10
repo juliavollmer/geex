@@ -39,8 +39,8 @@ $("#description").draggable()
 
 var divs = document.getElementsByClassName("rand");
 // get window width and height
-var winWidth = window.innerWidth - 10;
-var winHeight = window.innerHeight - 10;
+var winWidth = window.innerWidth - 15;
+var winHeight = window.innerHeight - 15;
 
 // i stands for "index". you could also call this banana or haircut. it's a variable
 
