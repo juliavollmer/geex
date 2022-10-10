@@ -12,7 +12,7 @@
 body {
   
   font-family: "Arial";
-  background-image: url('media/bg.jpg');
+  background-image: url('media/bg2.png');
   /* background-color: black; */
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -56,6 +56,9 @@ transform: translate(-5%, -5%); */
   /* transform:rotate(-30deg); */
   animation: rotate 15s ease-in-out infinite;
 }
+.rand {
+  z-index: 98;
+}
 #message {
   color: white;
   background-color: black;
@@ -93,8 +96,9 @@ transform: translate(-5%, -5%); */
   line-height: 100%;
   /* word-spacing: -2vh; */
   /* letter-spacing: -0.5vh;  */
-  color: #ffffff;
-  background-color: rgb(0, 0, 0);
+  color: black;
+  background-color: white;
+   /* rgb(0, 0, 0); */
   /* font-weight: bold; */
   /* text-orientation:sideways-right; */
   /* Original style: Please change back to see what you like the best. */
@@ -159,8 +163,8 @@ Changing the animation keyframes also changes speed. */
 }
 
 .ticker-container:hover .ticker-move2 {
-  animation-duration: 300s;
-  animation-delay: 150s;
+  animation-duration: 150s;
+  animation-delay: 75s;
 }
 
 /* Smiley text information */
@@ -279,9 +283,6 @@ z-index: 99;
 
 /* Stars 
 ------------------------------------- */
-#space {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 
 #space,
 .stars {
